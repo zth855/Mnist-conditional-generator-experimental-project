@@ -12,7 +12,7 @@ def get_model():
     condition_dim = 10
     img_shape = (1, 28, 28)
     generator = Generator(latent_dim, condition_dim, img_shape)
-    state_dict = torch.load('cgan_generator.pth')
+    state_dict = torch.load('cgan_generator_cuda.pth')
     generator.load_state_dict(state_dict)
     return generator
 
